@@ -3,7 +3,7 @@
 <head>
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <title>Bookmarkr - <%= title =></title>
+  <title>Bookmarkr - <%= page_title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,8 +11,22 @@
 <body>
 
 <div class='container'>
-<button type="button" class="btn btn-lg btn-info">Click Me</button>
-  <%= yield %>
+  <!-- LOGO -->
+  <div>
+    <h1>Bookmarkr</h1>
+  </div>
+
+  <!-- MENU -->
+  <div>
+    <button type="button" class="btn btn-lg btn-info">New</button>
+    <button type="button" class="btn btn-lg btn-info">View</button>
+    <button type="button" class="btn btn-lg btn-info">Delete</button>
+  </div>
+
+  <!-- MAIN -->
+  <div>
+    <%= yield %>
+  </div>
 </div>
 
 </body>
